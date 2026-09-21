@@ -61,3 +61,8 @@
 @keyframes preloader-mark{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
 @keyframes preloader-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @media(prefers-reduced-motion:reduce){.brand-preloader{display:none}.preloader-mark,.preloader-mark i{animation:none}}
+
+.brand-preloader{animation-duration:1s}.preloader-mark{animation:none}.preloader-mark strong{display:block;font-weight:400;font-size:25px;letter-spacing:5px}.loader-house{display:block;width:115px;height:96px;margin:0 auto 24px;stroke:#d7d2c5;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}.loader-house path{stroke-dasharray:1;stroke-dashoffset:1;animation:draw-house .65s ease-out forwards}.preloader-mark small{display:block;font:11px Arial,sans-serif;letter-spacing:1.5px;color:#b4b1a9;margin-top:27px}
+@keyframes draw-house{to{stroke-dashoffset:0}}
+@keyframes preloader-exit{0%,70%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
+@media(prefers-reduced-motion:reduce){.loader-house path{animation:none;stroke-dashoffset:0}}
