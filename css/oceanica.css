@@ -52,3 +52,12 @@
 @keyframes contact-arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:750px){.whatsapp-float{right:16px;bottom:calc(16px + env(safe-area-inset-bottom));padding:15px}.whatsapp-float span{display:none}}
 @media(prefers-reduced-motion:reduce){.whatsapp-float{animation:none;transition:none}.whatsapp-float:hover{transform:none}}
+
+/* Brief brand entrance: never blocks interaction or waits for remote assets. */
+.brand-preloader{position:fixed;inset:0;z-index:100;background:#111110;display:grid;place-items:center;pointer-events:none;animation:preloader-exit .7s ease forwards}
+.preloader-mark{color:#f2f1eb;font-family:Georgia,serif;font-size:clamp(29px,5vw,50px);letter-spacing:6px;text-align:center;animation:preloader-mark .45s ease-out both}
+.preloader-mark span{display:block;font-family:Arial,sans-serif;font-size:9px;letter-spacing:6px;margin-top:17px}.preloader-mark i{display:block;width:64px;height:1px;margin:28px auto 0;background:#c3bca9;transform-origin:center;animation:preloader-line .5s ease-out both}
+@keyframes preloader-exit{0%,45%{opacity:1;visibility:visible}100%{opacity:0;visibility:hidden}}
+@keyframes preloader-mark{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@keyframes preloader-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(prefers-reduced-motion:reduce){.brand-preloader{display:none}.preloader-mark,.preloader-mark i{animation:none}}
