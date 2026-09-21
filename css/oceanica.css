@@ -46,3 +46,9 @@
 @media(prefers-reduced-motion:reduce){.career-row[open] p,.about details[open] p{animation:none}}
 .header nav a{font-family:Georgia,'Times New Roman',serif;font-size:17px;letter-spacing:.15px}
 @media(max-width:750px){.header nav a{font-size:38px;letter-spacing:-.7px}}
+
+.whatsapp-float{position:fixed;right:24px;bottom:calc(24px + env(safe-area-inset-bottom));z-index:19;display:flex;align-items:center;gap:10px;padding:15px 19px;background:#f2f1eb;color:#171716;border:1px solid #ffffff80;border-radius:40px;box-shadow:0 6px 28px #0005;text-decoration:none;animation:contact-arrive .45s ease-out;transition:transform .2s,background .2s,box-shadow .2s}
+.whatsapp-float svg{width:27px;height:27px;flex-shrink:0}.whatsapp-float span{font-size:13px;letter-spacing:.2px}.whatsapp-float:hover{transform:translateY(-4px);background:#fff;box-shadow:0 10px 32px #0007}.whatsapp-float:focus-visible{outline:3px solid #fff;outline-offset:5px}.menu-open .whatsapp-float,.lightbox-open .whatsapp-float{visibility:hidden}
+@keyframes contact-arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:750px){.whatsapp-float{right:16px;bottom:calc(16px + env(safe-area-inset-bottom));padding:15px}.whatsapp-float span{display:none}}
+@media(prefers-reduced-motion:reduce){.whatsapp-float{animation:none;transition:none}.whatsapp-float:hover{transform:none}}
